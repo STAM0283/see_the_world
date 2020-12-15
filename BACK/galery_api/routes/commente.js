@@ -15,6 +15,16 @@ router.post("/comments", (req, res, next) => {
             res.sendStatus(200);
         }
     })
-})
+});
+
+router.get("/comments", (req, res) => {
+    connexion.query("SELECT * FROM comments", (err, result) => {
+        if(err){
+            res.status(500).send("Erreur lors de la récupération de la liste des commentaires")
+        } else {
+            res.json(result); 
+        }
+    })
+});
 
 module.exports = router;
