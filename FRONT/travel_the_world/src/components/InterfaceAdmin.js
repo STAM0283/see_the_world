@@ -25,6 +25,20 @@ const InterfaceAdmin = () => {
     const [locationCity, setLocationCity] = useState("");
     const [imageCity, setImageCity] = useState("");
 
+    const [idAnimals, setIdAnimals] = useState("");
+    const [idNatures, setIdNatures] = useState("");
+    const [idCity, setIdCity] = useState("");
+
+    const handleIdAnimals = (e) => {
+        setIdAnimals(e.target.value)
+    }
+    const handleIdNatures = (e) => {
+        setIdNatures(e.target.value)
+    }
+    const handleIdCity = (e) => {
+        setIdCity(e.target.value)
+    }
+
 
     const handleName = (e) => {
         setName(e.target.value)
@@ -159,6 +173,24 @@ const InterfaceAdmin = () => {
             })
 
     }
+//delete animals galery :
+
+const formDeleteAnimals =  (event) => {
+    event.preventDefault();
+       let id = parseInt(idAnimals);      
+    console.log("----------------",id)
+    axios.delete("http://localhost:3001/galery/animals" + id)
+        .then(response => {
+            console.log("my data", response.data)
+            setSent(response.data);
+            setIdAnimals("")
+            alert("Le portrait  a été supprimé de la galerie avec succé !")
+
+        }).catch(() => {
+            console.log("image not deleted")
+        })
+
+}
 
 
     return (
@@ -223,21 +255,9 @@ const InterfaceAdmin = () => {
             <div className="space-delete">
                 <div className="animalsSpace">
                     <h3>Galerie Annimaux</h3>
-                    <form>
-                        <label htmlFor="name">Nom</label><br />
-                        <input type="text" className="name" /><br />
-                        <label htmlFor="description">Description</label><br />
-                        <textarea type="text" rows="5" cols="33" className="description" /><br />
-                        <label htmlFor="species">Espece</label><br />
-                        <input type="text" className="species" /><br />
-                        <label htmlFor="speed">Vitesse</label><br />
-                        <input type="text" className="speed" /><br />
-                        <label htmlFor="size">Taille</label><br />
-                        <input type="text" className="size" /><br />
-                        <label htmlFor="weight">Poids</label><br />
-                        <input type="text" className="weight" /><br />
-                        <label htmlFor="picture">Image</label><br />
-                        <input type="text" className="picture" /><br />
+                    <form onSubmit={formDeleteAnimals}>
+                        <label htmlFor="id">ID</label><br />
+                        <input type="text" className="id" value={idAnimals} onChange={handleIdAnimals} /><br />
                         <Button variant="outlined" color="primary" size="small" type="submit">Supprimer</Button>
                     </form>
 
@@ -245,14 +265,8 @@ const InterfaceAdmin = () => {
                 <div className="naturesSpace">
                     <h3>Galerie Natures</h3>
                     <form>
-                        <label htmlFor="name">Nom</label><br />
-                        <input type="text" className="name" /><br />
-                        <label htmlFor="description">Description</label><br />
-                        <textarea type="text" rows="5" cols="33" className="description" /><br />
-                        <label htmlFor="location">Lieu</label><br />
-                        <input type="text" className="location" /><br />
-                        <label htmlFor="picture">Image</label><br />
-                        <input type="text" className="picture" /><br />
+                        <label htmlFor="id">ID</label><br />
+                        <input type="text" className="id" /><br />
                         <Button variant="outlined" color="primary" size="small" type="submit">Supprimer</Button>
                     </form>
 
@@ -260,14 +274,8 @@ const InterfaceAdmin = () => {
                 <div className="architectureSpace">
                     <h3>Galerie Architectures</h3>
                     <form>
-                        <label htmlFor="name">Nom</label><br />
-                        <input type="text" className="name" /><br />
-                        <label htmlFor="description">Description</label><br />
-                        <textarea type="text" rows="5" cols="33" className="description" /><br />
-                        <label htmlFor="location">Lieu</label><br />
-                        <input type="text" className="location" /><br />
-                        <label htmlFor="picture">Image</label><br />
-                        <input type="text" className="picture" /><br />
+                        <label htmlFor="id">ID</label><br />
+                        <input type="text" className="id" /><br />
                         <Button variant="outlined" color="primary" size="small" type="submit">Supprimer</Button>
                     </form>
 
