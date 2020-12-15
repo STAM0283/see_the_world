@@ -26,17 +26,9 @@ const InterfaceAdmin = () => {
     const [imageCity, setImageCity] = useState("");
 
     const [idAnimals, setIdAnimals] = useState("");
-    const [idNatures, setIdNatures] = useState("");
-    const [idCity, setIdCity] = useState("");
 
     const handleIdAnimals = (e) => {
         setIdAnimals(e.target.value)
-    }
-    const handleIdNatures = (e) => {
-        setIdNatures(e.target.value)
-    }
-    const handleIdCity = (e) => {
-        setIdCity(e.target.value)
     }
 
 

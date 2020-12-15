@@ -21,10 +21,10 @@ const AllComments = () => {
             <Button onClick={() => history.push("/")} variant="contained" color="secondary" size="small" style={{ marginBottom: "10px" }}><i className="fas fa-undo">Accueil</i></Button>
             <div className="comment-container">
                 {
-                    comments.map((item) => {
+                    comments.map((item, i) => {
                         return (
 
-                            <Card className="comment-user">
+                            <Card className="comment-user" key={i}>
                                 <Card style={{ backgroundColor: "#87CEFA", margin: "5px" }}>
                                     <p>{item.name}</p>
                                 </Card>

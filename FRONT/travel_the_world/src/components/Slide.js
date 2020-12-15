@@ -24,37 +24,37 @@ const Slideshow = () => {
             <Slide {...proprieties}>
                 <div className="each-slide">
                     <div>
-                        <img src={ara} alt="picture-ara" />
+                        <img src={ara} alt="pictureAra" />
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img src={bird} alt="picture-bird"/>
+                        <img src={bird} alt="pictureBird"/>
                     </div>
                  </div>
                  <div className="each-slide">   
                     <div>
-                        <img src={butterfly} alt="picture-butterfly" />
+                        <img src={butterfly} alt="pictureButterfly" />
                     </div>
                  </div>
                  <div className="each-slide">   
                     <div>
-                        <img src={cafe} alt="picture-cafe" />
+                        <img src={cafe} alt="pictureCafe" />
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img src={iceland} alt="picture-iceland" />
+                        <img src={iceland} alt="pictureIceland" />
                     </div>
                 </div> 
                 <div className="each-slide">
                     <div>
-                        <img src={the_road} alt="picture-road" />
+                        <img src={the_road} alt="pictureRoad" />
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img src={tiger} alt="picture-tiger" />
+                        <img src={tiger} alt="pictureTiger" />
                     </div>
                 </div>
 

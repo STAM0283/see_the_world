@@ -7,7 +7,8 @@ const Footer = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     return (
         <div className="footer">
-            <Modal isOpen={modalIsOpen}>
+            <Modal isOpen={modalIsOpen}
+            ariaHideApp={false}>
                 <Button variant="outlined" color="primary" size="small" onClick={() => setModalIsOpen(false)}>Hide Modal</Button>
                 <div className="about-us">
                     <p>C’est toujours la même histoire. A chaque arrivée sur un nouveau continent, un nouveau pays, une nouvelle ville,

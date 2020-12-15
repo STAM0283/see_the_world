@@ -11,7 +11,6 @@ import Button from "@material-ui/core/Button";
 
 const Home = (props) => {
     const galery = props.dataMovie.galery;
-    console.log("@@@@@@@@@@", galery)
     const history = useHistory();
 
     const selectPicture = (event) => {
@@ -27,28 +26,28 @@ const Home = (props) => {
             <div className="galery-container">
                 <div className="galery-menu">
                     <div>
-                        <img src={cat} alt="picture-cat" /><br />
+                        <img src={cat} alt="pictureCat" /><br />
                         <Button variant="outlined" color="primary" size="small" onClick={() => props.dataMovie.setQuery("animals")}>Gallery Annimaux</Button>
                     </div>
                     <div>
-                        <img src={nature} alt="picture-nature"/><br />
+                        <img src={nature} alt="pictureNature"/><br />
                         <Button variant="outlined" color="primary" size="small" onClick={() => props.dataMovie.setQuery("natures")}>Gallery Natures</Button>
                     </div>
                     <div>
-                        <img src={building} alt="picture-building" /><br />
+                        <img src={building} alt="pictureBuilding" /><br />
                         <Button variant="outlined" color="primary" size="small" onClick={() => props.dataMovie.setQuery("architectures")}>Gallery Natures</Button>
                     </div>
                 </div>
                 <div className="imagesPerGalery">
                     {
-                        galery.map((item) => {
+                        galery.map((item, i) => {
                             return (
-                                <Card style={{ marginTop: "10px" }}>
-                                    <div className>
+                                <Card style={{ marginTop: "10px" }} key={i}>
+                                    <div>
                                         <Card style={{ backgroundColor: "#87CEFA" }}>
                                             <p>{item.name}</p>
                                         </Card>
-                                        <img id={item.id} src={item.image} onClick={selectPicture} />
+                                        <img id={item.id} src={item.image} onClick={selectPicture} alt=""/>
                                     </div>
                                 </Card>
                             )
@@ -68,15 +67,15 @@ const Home = (props) => {
                 </div>
                 <div className="galery-menu">
                     <div>
-                        <img src={cat} alt="picture-cat" /><br />
+                        <img src={cat} alt="pictureCat" /><br />
                         <Button variant="outlined" color="primary" size="small" onClick={() => props.dataMovie.setQuery("animals")}>Gallery Annimaux</Button>
                     </div>
                     <div>
-                        <img src={nature} alt="picture-nature"/><br />
+                        <img src={nature} alt="pictureNature"/><br />
                         <Button variant="outlined" color="primary" size="small" onClick={() => props.dataMovie.setQuery("natures")}>Gallery Natures</Button>
                     </div>
                     <div>
-                        <img src={building} alt="picture-building" /><br />
+                        <img src={building} alt="pictureBuilding" /><br />
                         <Button variant="outlined" color="primary" size="small" onClick={() => props.dataMovie.setQuery("architectures")}>Gallery Natures</Button>
                     </div>
                 </div>

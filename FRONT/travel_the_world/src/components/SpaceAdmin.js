@@ -14,10 +14,7 @@ const SpaceAdmin = () => {
         setPassword(event.target.value)
     }
     const signIn = () => {
-        console.log("email", email);
-        console.log(typeof(email));
-        console.log(typeof(password))
-        console.log("password", password)
+    
         if(email=== process.env.REACT_APP_EMAIL && password === process.env.REACT_APP_PASSWORD){
             history.push("/interfaceAdmin");
         }

@@ -196,6 +196,9 @@ img, button {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  .footer{
+    margin-top: 90%;
+  }
   .header h1 {
     margin-left: 10%;
   }
@@ -209,6 +212,9 @@ img, button {
     width: 60%;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+  .footer{
+    margin-top: 70%;
   }
   .header h1 {
     margin-left: 10%;
