@@ -47,7 +47,9 @@ const Main = () => {
               <LeaveComment />
           </Route>
           <Route exact path="/allComments">
-              <AllComments />
+              <AllComments 
+              
+              />
 
           </Route>
         </Switch>
