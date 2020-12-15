@@ -3,6 +3,8 @@ import axios from "axios";
 import Home from "./Home";
 import {Switch, Route} from "react-router-dom";
 import ImageSelected from "./ImageSelected"; 
+import LeaveComment from "./LeaveComment"; 
+import AllComments from "./AllComments"; 
 
 
 
@@ -40,6 +42,13 @@ const Main = () => {
                 query,
                 setQuery,
             }} />
+          </Route>
+          <Route exact path="/comment">
+              <LeaveComment />
+          </Route>
+          <Route exact path="/allComments">
+              <AllComments />
+
           </Route>
         </Switch>
         </div>

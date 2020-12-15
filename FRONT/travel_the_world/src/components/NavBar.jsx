@@ -16,6 +16,16 @@ const NavBar = () => {
 
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink exact activeClassName="current" to="/comment">
+
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact activeClassName="current" to="/allComments">
+
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>
