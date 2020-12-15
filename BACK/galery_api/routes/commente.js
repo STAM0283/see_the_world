@@ -9,7 +9,6 @@ router.post("/comments", (req, res, next) => {
 
     connexion.query("INSERT INTO comments SET ?", dataForm, (err, results) => {
         if (err) {
-            console.log(err);
             res.status(500).send("Erreur lors de la sauvegarde du commentaire");
         } else {
             res.sendStatus(200);

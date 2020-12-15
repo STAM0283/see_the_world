@@ -19,7 +19,6 @@ router.post("/architectures", (req, res, next) => {
 
     connexion.query("INSERT INTO architectures SET ?", dataForm, (err, results) => {
         if (err) {
-            console.log(err);
             res.status(500).send("Erreur lors de la sauvegarde du portrait citie");
         } else {
             res.sendStatus(200);
@@ -33,7 +32,6 @@ router.delete("/architectures", (req, res) => {
 
     connexion.query("DELETE FROM architectures WHERE id = ?", dataForm, (err, results) => {
         if (err) {
-            console.log(err);
             res.status(500).send("Erreur lors de la supression d'un portrait");
         } else {
             res.sendStatus(200);
