@@ -47,11 +47,25 @@ img, button{
   font-family: 'Satisfy', cursive;
   justify-content: space-between;
   margin-bottom: 20px;
-  background-color: burlywood;
+  background-color: #87CEFA;
 }
-.header img, .header h1{
+.Logo-App, .header h1{
   margin-top: 20px;
   margin-bottom: 20px;
+}
+#Logo-App{
+  margin-left: 30px;
+}
+.header h1{
+ margin-left: 0;
+}
+.space-admin img{
+  width: 30px;
+  margin: 5px;
+}
+.space-admin{
+  margin-right: 10px;
+  margin-top: ;
 }
 .see-world{
   font-size: xx-large;

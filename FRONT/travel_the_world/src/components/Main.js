@@ -38,7 +38,7 @@ const Main = () => {
                 galery,
                 setGalery,
                 query,
-                setQuery
+                setQuery,
             }} />
           </Route>
         </Switch>
