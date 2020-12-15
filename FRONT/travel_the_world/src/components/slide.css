@@ -1,7 +1,3 @@
-.slide-container img{
-    
-}
-
 @media (max-width: 375px){
     .slide-container img {
       width: 300px;

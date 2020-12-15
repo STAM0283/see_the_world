@@ -9,7 +9,7 @@ import ImageSelected from "./ImageSelected";
 const Main = () => {
 
     const [galery, setGalery] = useState(null);
-    const [query, setQuery] = useState("animals");
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         axios.get(`http://localhost:3001/galery/${query}`)

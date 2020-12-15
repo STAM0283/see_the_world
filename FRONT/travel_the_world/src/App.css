@@ -1,7 +1,13 @@
 .App {
   text-align: center;
 }
-
+*{
+  margin: auto;
+  padding: auto;
+}
+img, button{
+  cursor: pointer;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +42,70 @@
     transform: rotate(360deg);
   }
 }
+
+.galery-menu img{
+  width: 300px;
+  height: 200px;
+}
+.galery-menu{
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imagesPerGalery {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.imagesPerGalery img{
+  width: 280px;
+  height: 300px;
+}
+.imageSelected{
+  width: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 375px){
+  .imageSelected{
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+@media (max-width: 414px){
+  .imageSelected{
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+@media (max-width: 320px){
+  .imageSelected{
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+@media (max-width: 768px){
+  .imageSelected{
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+@media (max-width: 1024px){
+  .imageSelected{
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+
