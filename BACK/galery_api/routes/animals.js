@@ -28,5 +28,19 @@ router.post("/animals", (req, res, next) => {
     })
 });
 
+router.delete("/animals", (req, res) => {
+
+    const dataForm = req.body.id;
+
+    connexion.query("DELETE FROM animals WHERE id = ?", dataForm, (err, results) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Erreur lors de la supression d'un portrait");
+        } else {
+            res.sendStatus(200);
+        }
+    })
+})
+
 
 module.exports = router;

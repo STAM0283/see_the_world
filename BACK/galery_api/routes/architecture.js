@@ -27,5 +27,18 @@ router.post("/architectures", (req, res, next) => {
     })
 });
 
+router.delete("/architectures", (req, res) => {
+
+    const dataForm = req.body;
+
+    connexion.query("DELETE FROM architectures WHERE id = ?", dataForm, (err, results) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Erreur lors de la supression d'un portrait");
+        } else {
+            res.sendStatus(200);
+        }
+    })
+})
 
 module.exports = router;
