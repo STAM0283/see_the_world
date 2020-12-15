@@ -22,9 +22,9 @@ const animalsRouter = require("./routes/animals");
 const natureRouter = require("./routes/nature");
 const architectureRouter = require("./routes/architecture");
 
-app.use("/", animalsRouter);
-app.use("/", natureRouter);
-app.use("/", architectureRouter); 
+app.use("/galery", animalsRouter);
+app.use("/galery", natureRouter);
+app.use("/galery", architectureRouter); 
 
 app.use((req, res, next) => {
     res.status(404).send("<img src='https://worldofvoz.files.wordpress.com/2020/01/http-error-404-not-found.png' />")
