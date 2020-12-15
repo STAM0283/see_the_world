@@ -26,6 +26,16 @@ const NavBar = () => {
 
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink exact activeClassName="current" to="/spaceAdmin">
+
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact activeClassName="current" to="/interfaceAdmin">
+
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>

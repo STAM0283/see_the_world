@@ -45,7 +45,9 @@ const ImageSelected = (props) => {
 
     return props.dataMovie.galery !== null ? (
         < div className="wrapper">
-            <Button onClick={onClickReturn} variant="contained" color="secondary" size="small" style={{ marginBottom: "10px" }}>Retour</Button>
+            <Button onClick={onClickReturn} variant="contained" color="secondary" size="small" style={{ marginBottom: "10px" }}>
+            <i className="fas fa-undo">Accueil</i>
+            </Button>
             <div className="home">
                 {props.dataMovie.galery.map((item, index) => {
                     return (
