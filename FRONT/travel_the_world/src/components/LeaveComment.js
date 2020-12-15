@@ -43,8 +43,10 @@ const LeaveComments = () => {
 
     return (
         <div>
-            <Button onClick={() => history.push("/")} variant="contained" color="secondary" size="small" style={{ marginBottom: "10px" }}>Retour à l'accueil</Button>
-            <Button onClick={() => history.push("/allComments")} variant="contained" color="secondary" size="small" style={{ marginBottom: "10px" }}>Voir les commentaires</Button>
+            <Button onClick={() => history.push("/")} variant="contained" color="secondary" style={{ marginBottom: "10px", height:"35px", width: "100px", marginRight : "10px" }}>
+                <i className="fas fa-undo">Accueil</i>
+                </Button>
+            <Button onClick={() => history.push("/allComments")} variant="contained" color="secondary"  style={{ marginBottom: "10px", height:"35px", width: "100px" }}>Avis<i class="fas fa-arrow-right"></i></Button>
             <form onSubmit={formSubmit} className="form-comment">
                 <label htmlFor="name">Nom </label><br/>
                 <input type="text" id="name" placeholder="Votre nom" value={name} onChange={handleName} /><br />

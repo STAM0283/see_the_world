@@ -4,7 +4,9 @@ import Home from "./Home";
 import {Switch, Route} from "react-router-dom";
 import ImageSelected from "./ImageSelected"; 
 import LeaveComment from "./LeaveComment"; 
-import AllComments from "./AllComments"; 
+import AllComments from "./AllComments";
+import SpaceAdmin from "./SpaceAdmin";
+import InterfaceAdmin from "./InterfaceAdmin";  
 
 
 
@@ -47,10 +49,13 @@ const Main = () => {
               <LeaveComment />
           </Route>
           <Route exact path="/allComments">
-              <AllComments 
-              
-              />
-
+              <AllComments />
+          </Route>
+          <Route exact path="/spaceAdmin">
+              <SpaceAdmin />
+          </Route>
+          <Route exact path="/interfaceAdmin">
+              <InterfaceAdmin />
           </Route>
         </Switch>
         </div>

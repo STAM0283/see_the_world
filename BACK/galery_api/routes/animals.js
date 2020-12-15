@@ -14,5 +14,19 @@ router.get("/animals", (req, res) => {
     })
 });
 
+router.post("/animals", (req, res, next) => {
+
+    const dataForm = req.body;
+
+    connexion.query("INSERT INTO animals SET ?", dataForm, (err, results) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Erreur lors de la sauvegarde du portrait annimal");
+        } else {
+            res.sendStatus(200);
+        }
+    })
+});
+
 
 module.exports = router;

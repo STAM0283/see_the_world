@@ -13,4 +13,19 @@ router.get("/natures", (req, res) => {
 });
 
 
+router.post("/natures", (req, res, next) => {
+
+    const dataForm = req.body;
+
+    connexion.query("INSERT INTO natures SET ?", dataForm, (err, results) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Erreur lors de la sauvegarde du portrait nature ");
+        } else {
+            res.sendStatus(200);
+        }
+    })
+});
+
+
 module.exports = router;

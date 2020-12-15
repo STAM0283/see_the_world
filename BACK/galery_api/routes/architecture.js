@@ -13,4 +13,19 @@ router.get("/architectures", (req, res) => {
 });
 
 
+router.post("/architectures", (req, res, next) => {
+
+    const dataForm = req.body;
+
+    connexion.query("INSERT INTO architectures SET ?", dataForm, (err, results) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Erreur lors de la sauvegarde du portrait citie");
+        } else {
+            res.sendStatus(200);
+        }
+    })
+});
+
+
 module.exports = router;

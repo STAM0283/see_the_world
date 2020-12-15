@@ -18,7 +18,7 @@ const AllComments = () => {
     }, [])
     return comments !== null ? (
         <div>
-            <Button onClick={() => history.push("/")} variant="contained" color="secondary" size="small" style={{ marginBottom: "10px" }}>Retour à l'accueil</Button>
+            <Button onClick={() => history.push("/")} variant="contained" color="secondary" size="small" style={{ marginBottom: "10px" }}><i className="fas fa-undo">Accueil</i></Button>
             <div className="comment-container">
                 {
                     comments.map((item) => {

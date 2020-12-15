@@ -14,7 +14,7 @@ const Header = () => {
             <h1>Voyage Virtuel</h1>
             <div className="space-admin">
                 <img src={comment} alt="icone-comment" onClick={() => history.push("/comment")} />
-                <img src={admin} alt="icone-admin" />
+                <img src={admin} alt="icone-admin" onClick={() => history.push("/spaceAdmin")}/>
                 <img src={users} alt="icone-users" />
             </div>
         </div>
