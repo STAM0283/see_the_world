@@ -65,7 +65,6 @@ img, button{
 }
 .space-admin{
   margin-right: 10px;
-  margin-top: ;
 }
 .see-world{
   font-size: xx-large;
@@ -97,6 +96,20 @@ img, button{
   width: 20%;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.form-comment{
+ padding-bottom: 20px;
+ padding-top: 20px;
+}
+.comment-user{
+  width: 20%;
+  height: 100px;
+  font-family: 'Satisfy', cursive;
+  justify-content: space-around;
+}
+.comment-container{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 375px){
