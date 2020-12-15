@@ -59,7 +59,7 @@ const ImageSelected = (props) => {
                                 <p>{item.weight ? "Poids : " + item.weight : ""}</p>
                                 <p>{item.speed ? "vitesse : " + item.speed : "lieu : " + item.location}</p>
                             </Card>
-                            <img src={item.image} alt="" />
+                            <img src={item.image} alt="" style={{width: "300px"}}/>
 
                             <IconButton
                                 className={clsx(classes.expand, {
