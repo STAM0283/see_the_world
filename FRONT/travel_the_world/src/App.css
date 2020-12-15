@@ -42,7 +42,24 @@ img, button{
     transform: rotate(360deg);
   }
 }
+.header{
+  display: flex;
+  font-family: 'Satisfy', cursive;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: burlywood;
+}
+.header img, .header h1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.see-world{
+  font-size: xx-large;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Satisfy', cursive;
 
+}
 .galery-menu img{
   width: 300px;
   height: 200px;

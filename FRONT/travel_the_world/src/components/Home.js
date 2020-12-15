@@ -63,6 +63,9 @@ const Home = (props) => {
     ) : (
             <div>
                 <Slideshow />
+                <div>
+                    <p className="see-world">Voir le monde en images</p>
+                </div>
                 <div className="galery-menu">
                     <div>
                         <img src={cat} alt="picture-cat" /><br />
